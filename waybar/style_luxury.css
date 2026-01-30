@@ -1,0 +1,288 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Light - Obsidian Glow */
+/* ========================================
+   WAYBAR MINIMAL CLEAN - Simple & Safe
+   ======================================== */
+
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  min-height: 0;
+  font-size: 14px;
+}
+
+window#waybar {
+  background: white;
+  border-radius: 12px;
+}
+
+window#waybar.hidden {
+  opacity: 0.7;
+}
+
+tooltip {
+  background: white;
+  border-radius: 10px;
+}
+
+tooltip label {
+  color: #373737;
+  padding: 0 2px;
+}
+
+/* =====================
+ * Taskbar & Workspaces
+ * ===================== */
+
+#taskbar button,
+#workspaces button {
+  color: #585b70;
+  padding: 0 4px;
+  border-radius: 9px;
+  box-shadow: none;
+  text-shadow: none;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+/* ========================================
+   WORKSPACES - MODERN WHITE THEME
+   ======================================== */
+
+@keyframes gradient_f {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#workspaces button.active {
+    background: linear-gradient(135deg, #4776E6 0%, #8E54E9 100%);
+    background-size: 300% 300%;
+    color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(142, 84, 233, 0.5);
+    padding: 0 8px;
+    animation: gradient_f 6s ease infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button {
+    color: #555555; 
+}
+
+#workspaces button.focused {
+    color: #8E54E9;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    background-color: rgba(142, 84, 233, 0.15);
+    color: #8E54E9;
+    border-radius: 15px;
+    padding: 0 2px;
+    transition: all 0.3s ease;
+}
+
+/* ========================================
+   ALL MODULES - Base styling
+   ======================================== */
+
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpris,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#pulseaudio-slider,
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-browser,
+#custom-cava_mviz,
+#custom-cycle_wall,
+#custom-dot_update,
+#custom-file_manager,
+#custom-keybinds,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-hint,
+#custom-hypridle,
+#custom-menu,
+#custom-playerctl,
+#custom-power_vertical,
+#custom-power,
+#custom-quit,
+#custom-reboot,
+#custom-settings,
+#custom-spotify,
+#custom-swaync,
+#custom-tty,
+#custom-updater,
+#custom-hyprpicker,
+#custom-weather,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay {
+    color: #000000;
+    border-radius: 8px;
+    padding: 4px 6px;
+}
+
+/* Hover effects */
+#backlight:hover,
+#battery:hover,
+#bluetooth:hover,
+#cpu:hover,
+#network:hover,
+#pulseaudio:hover,
+#temperature:hover,
+#custom-menu:hover,
+#custom-power:hover,
+#custom-unikey:hover {
+  color: #ff9eb5;
+  background: rgba(255, 158, 181, 0.08);
+}
+
+/* =====================
+ * Taskbar States
+ * ===================== */
+
+#taskbar button.active {
+  background-color: #585b70;
+  color: #cdd6f4;
+  padding: 0 12px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#taskbar button:hover {
+  padding: 0 3px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+/* ========================================
+   UNIFIED MODULES SPACING 
+   ======================================== */
+
+#clock, 
+#bluetooth, 
+#network, 
+#custom-unikey, 
+#pulseaudio, 
+#backlight, 
+#battery, 
+#tray,
+#mpris,
+#idle_inhibitor,
+#temperature,
+#custom-power {
+    padding: 0 8px;      
+    margin: 0 2px;       
+    min-width: 0;        
+    color: #050a30;    
+}
+
+
+
+/* Tinh chỉnh riêng cho các icon đặc biệt */
+#clock {
+    font-size: 15px;
+    padding: 0 12px;
+    color: #4776E6;
+}
+
+#custom-unikey.vi { color: #c53030; }
+#custom-unikey.en { color: #2b6cb0; }
+
+#battery.charging { color: #4ade80; }
+#battery.critical:not(.charging) { color: #ef4444; }
+
+/* Tooltip */
+tooltip {
+    background: white;
+    border-radius: 10px;
+}
+#network {
+ color: #ff7e5f;
+}
+
+/* =====================
+ * Battery Alert
+ * ===================== */
+#battery.critical:not(.charging) {
+  color: #f53c3c;
+
+  animation-name: blink;
+  animation-duration: 3s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+/* =====================
+ * Sliders
+ * ===================== */
+#backlight-slider slider,
+#pulseaudio-slider slider {
+  min-width: 0;
+  min-height: 0;
+  opacity: 0;
+
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+#backlight-slider trough,
+#pulseaudio-slider trough {
+  min-width: 80px;
+  min-height: 5px;
+  border-radius: 5px;
+  background-color: grey;
+}
+
+#backlight-slider highlight,
+#pulseaudio-slider highlight {
+  min-height: 10px;
+  border-radius: 5px;
+  background-color: #ba5663;
+}
+
+
+/* =====================
+ * Animations
+ * ===================== */
+@keyframes blink {
+  to {
+    color: #000000;
+  }
+}
